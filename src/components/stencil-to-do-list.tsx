@@ -1,5 +1,5 @@
 /**
- * Import Stencil modules.
+ * Import required Stencil modules.
  */
 import { Component, Element, Prop, h } from '@stencil/core';
 
