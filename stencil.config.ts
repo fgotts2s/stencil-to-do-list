@@ -15,7 +15,6 @@ export const config: Config = {
     },
     {
       type: 'www',
-      baseUrl: 'https://fgotts2s.github.io/',
       serviceWorker: null
     },
   ],
