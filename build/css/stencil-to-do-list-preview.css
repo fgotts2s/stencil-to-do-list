@@ -1,0 +1,109 @@
+:host {
+  --cyan: rgba(0, 157, 224, 1.0);
+  --gray: rgba(128, 128, 128, 1.0);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: initial;
+}
+.hidden {
+  display: none;
+}
+header h1 {
+  position: relative;
+  margin: 0.25em 0 0 0;
+  font-size: 3em;
+  font-family: 'Arvo', sans-serif;
+  letter-spacing: 0.05em;
+}
+header h1 span#first-o,
+header h1 span#second-o {
+  display: inline-block;
+  color: transparent;
+}
+header h1 span#first-o::before,
+header h1 span#second-o::before {
+  content: '';
+  display: inline-block;
+  margin: 0 -0.6em 0 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 0.55em;
+  height: 0.55em;
+}
+header h1 span#first-o::before {
+  border: 0.12em solid var(--cyan);
+  background: transparent;
+}
+header h1 span#second-o::before {
+  background: var(--cyan);
+}
+header h1::after {
+  content: '';
+  position: absolute;
+  margin: 0 0 0 0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  background: url('/stencil-to-do-list/build/img/stencil.svg') no-repeat;
+}
+header h2 {
+  margin: 0;
+}
+header h2.done {
+  display: inline-block;
+  background: linear-gradient(to right, transparent 0, currentcolor 0) no-repeat right center / 100% 0.1em;
+  color: var(--gray);
+}
+section.to-do-list ul.to-do-list {
+  padding: 0;
+  text-align: start;
+  list-style: none;
+}
+section.to-do-list ul.to-do-list li {
+  position: relative;
+  padding: 0.5em;
+}
+section.to-do-list ul.to-do-list li input[type=checkbox].select {
+  appearance: none;
+  position: relative;
+  bottom: 0.1em;
+  margin: 0 0.5em 0 0;
+  font-size: inherit;
+  vertical-align: middle;
+}
+section.to-do-list ul.to-do-list li.pending input[type=checkbox].select,
+section.to-do-list ul.to-do-list li.done input[type=checkbox].select {
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+}
+section.to-do-list ul.to-do-list li.pending input[type=checkbox].select {
+  border: 0.2em solid var(--cyan);
+  background: transparent;
+}
+section.to-do-list ul.to-do-list li.done input[type=checkbox].select {
+  border: 0.5em solid var(--cyan);
+  background: var(--cyan);
+}
+section.to-do-list ul.to-do-list li label.text {
+  --strikethrough: 0;
+  background: linear-gradient(to right, transparent 0, currentcolor 0) no-repeat right center / calc(var(--strikethrough) * 100%) 0.1em;
+  background-position-x: left;
+  cursor: text;
+  word-break: break-all;
+}
+section.to-do-list ul.to-do-list li.done label.text {
+  --strikethrough: 1;
+  color: var(--gray);
+}
+footer {
+  margin: 1em 0 3em 0;
+}
+footer span#count {
+  position: relative;
+  float: left;
+  opacity: 1;
+  padding: 0;
+  color: var(--gray);
+}
