@@ -15,7 +15,7 @@ export const config: Config = {
     },
     {
       type: 'www',
-      baseUrl: 'https://fgotts2s.github.io/stencil-to-do-list/',
+      baseUrl: 'https://fgotts2s.github.io/',
       serviceWorker: null
     },
   ],
